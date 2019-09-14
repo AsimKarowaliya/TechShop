@@ -56,8 +56,13 @@ namespace TechShop
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                     name: "Home",
+                     template: "Index",
+                     defaults: new { controller = "Home", action = "Index" }
+                 );
+                routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Account}/{action=Login}");
             });
         }
     }
