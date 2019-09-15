@@ -4,5 +4,70 @@
     Layout = "~/Views/Shared/_loginLayout.cshtml";
 }
 
-<h1>SignUp</h1>
+@model SignUp
 
+    <body>
+        <div id="sigup">
+            <h3 class="text-center text-white pt-5">SignUp form</h3>
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
+                            <form id="login-form" class="form" action="" method="post">
+                                <h3 class="text-center text-info">Login</h3>
+                                <div class="form-group">
+                                    <label asp-for="FirstName" class="text-info">First Name:</label><br>
+                                    <input type="text" name="firstname" id="firstname" class="form-control" asp-for="FirstName">
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="LastName" class="text-info">Last Name:</label><br>
+                                    <input type="text" name="lastname" id="lastname" class="form-control" asp-for="LastName">
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Address1" class="text-info">Address 1:</label><br>
+                                    <input type="text" name="address1" id="address1" class="form-control" asp-for="Address1">
+                                    <span asp-validation-for="Address1" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Address2" class="text-info">Address 2 (Optional):</label><br>
+                                    <input type="text" name="address2" id="address2" class="form-control" asp-for="Address2">
+                                    <span asp-validation-for="Address2" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="City" class="text-info">City:</label><br>
+                                    <input type="text" name="city" id="city" class="form-control" asp-for="City">
+                                    <span asp-validation-for="City" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="State" class="text-info">State:</label><br>
+                                    <input type="text" name="state" id="state" class="form-control" asp-for="State">
+                                    <span asp-validation-for="State" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Zipcode" class="text-info">Zip Code:</label><br>
+                                    <input type="text" name="zipcode" id="zipcode" class="form-control" asp-for="Zipcode">
+                                    <span asp-validation-for="Zipcode" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Phone" class="text-info">Phone:</label><br>
+                                    <input type="text" name="phone" id="phone" class="form-control" asp-for="Phone">
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Email" class="text-info">Email:</label><br>
+                                    <input type="email" name="email" id="email" class="form-control" asp-for="Email">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="submit" class="btn btn-info btn-md" value="signUp" asp-controller="Account" asp-action="Login">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>

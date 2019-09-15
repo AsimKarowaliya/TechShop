@@ -26,8 +26,19 @@ namespace TechShop.Controllers
              return View(login);
         }
 
+        [HttpGet]
         public IActionResult SignUp()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SignUp(SignUp signUp)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Login");
+            }
             return View();
         }
     }
