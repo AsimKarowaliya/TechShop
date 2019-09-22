@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,22 +11,20 @@ namespace TechShop.Models
 {
     public class SignUp
     {
-        [Required]
-        public string FirstName { get; set; }
-        [Required]
-        public string  LastName { get; set; }
-        [Required]
-        public string Address1 { get; set; }
-        public string Address2 { get; set; }
-        [Required]
-        public string City { get; set; }
-        [Required]
-        public string State { get; set; }
-        [Required]
-        public int Zipcode { get; set; }
-        [Required]
-        public int Phone { get; set; }
-        [Required]
+        [Key]
+        public int UserID { get; set; }
+        
+       
+        [Required(ErrorMessage = "Email is required")]
         public string Email { get; set; }
+  
+        [Required(ErrorMessage ="Password Required"), DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        [Required(ErrorMessage ="Password Required"), DataType(DataType.Password)]
+        [Compare("Password")]
+        public string ConfirmPassword { get; set; }
     }
+
+   
 }

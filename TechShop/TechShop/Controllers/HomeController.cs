@@ -10,9 +10,15 @@ namespace TechShop.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly DataBaseContext _db;
+        public HomeController(DataBaseContext db)
+        {
+            _db = db;
+        }
         public IActionResult Index()
         {
-            return View();
+            ICollection<Products> products = _db.Products.ToList();
+            return View(products);
         }
 
         public IActionResult Privacy()
