@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechShop.Models;
 
 namespace TechShop.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20190929011802_profiles")]
+    partial class profiles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -219,13 +221,11 @@ namespace TechShop.Migrations
 
                     b.Property<string>("LastName");
 
-                    b.Property<int?>("ProductId");
+                    b.Property<int>("PrdouctFK");
 
                     b.Property<int>("ZipCode");
 
                     b.HasKey("ProfileID");
-
-                    b.HasIndex("ProductId");
 
                     b.ToTable("Profile");
                 });
@@ -293,13 +293,6 @@ namespace TechShop.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("TechShop.Models.Profile", b =>
-                {
-                    b.HasOne("TechShop.Models.Products", "ProductID")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
                 });
 #pragma warning restore 612, 618
         }

@@ -41,10 +41,18 @@
                         </li>
 
 
+
                     </ul>
                 </div>
+
+
+
                 @if (signInManager.IsSignedIn(User))
                 {
+
+                    <a class="nav-link text-dark float-right" asp-area="" asp-controller="Profiles" asp-action="Index">Profile</a>
+
+
 
                     <form method="post" asp-action="Logout" asp-controller="Account">
                         <button type="submit" class="btn btn-danger float-right">

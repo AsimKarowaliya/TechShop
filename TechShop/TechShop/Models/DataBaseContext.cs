@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TechShop.Models;
 
 namespace TechShop.Models
 {
@@ -16,5 +17,9 @@ namespace TechShop.Models
         public new DbSet<SignUp> Users { get; set; }
 
         public DbSet<Products> Products { get; set; }
+
+        public DbSet<TechShop.Models.Profile> Profile { get; set; }
+
+        
     }
 }

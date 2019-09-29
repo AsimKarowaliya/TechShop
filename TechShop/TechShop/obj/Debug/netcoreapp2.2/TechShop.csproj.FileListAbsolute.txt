@@ -31,3 +31,9 @@ C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2
 C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
 C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2.2\Razor\Views\Account\SignUp.g.cshtml.cs
 C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_loginLayout.g.cshtml.cs
+C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2.2\Razor\Views\Home\Profile.g.cshtml.cs
+C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2.2\Razor\Views\Profiles\Create.g.cshtml.cs
+C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2.2\Razor\Views\Profiles\Delete.g.cshtml.cs
+C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2.2\Razor\Views\Profiles\Details.g.cshtml.cs
+C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2.2\Razor\Views\Profiles\Edit.g.cshtml.cs
+C:\Users\akaro\Documents\GitHub\TechShop\TechShop\TechShop\obj\Debug\netcoreapp2.2\Razor\Views\Profiles\Index.g.cshtml.cs

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechShop.Models;
 
 namespace TechShop.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    partial class DataBaseContextModelSnapshot : ModelSnapshot
+    [Migration("20190928184948_profile")]
+    partial class profile
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -136,6 +138,8 @@ namespace TechShop.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<string>("Address1");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
@@ -203,33 +207,6 @@ namespace TechShop.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("TechShop.Models.Profile", b =>
-                {
-                    b.Property<int>("ProfileID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Address1");
-
-                    b.Property<string>("Address2");
-
-                    b.Property<string>("City");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
-
-                    b.Property<int?>("ProductId");
-
-                    b.Property<int>("ZipCode");
-
-                    b.HasKey("ProfileID");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("Profile");
-                });
-
             modelBuilder.Entity("TechShop.Models.SignUp", b =>
                 {
                     b.Property<int>("UserID")
@@ -293,13 +270,6 @@ namespace TechShop.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("TechShop.Models.Profile", b =>
-                {
-                    b.HasOne("TechShop.Models.Products", "ProductID")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
                 });
 #pragma warning restore 612, 618
         }

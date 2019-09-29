@@ -8,6 +8,8 @@ namespace TechShop.Models
 {
     public class ApplicationUser: IdentityUser
     {
-        public string Address1 { get; set; }
+
+
+
     }
 }
